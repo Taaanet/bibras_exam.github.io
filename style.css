@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* تغيير Align items إلى أعلى */
+    min-height: 80vh;
+    padding: 20px;
+    margin: 0;
+    direction: rtl; /* الاتجاه من اليمين لليسار */
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* تحديد عرض أقصى للاختبار */
+    width: 100%;
+}
+
+.screen {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* التنسيق للصور داخل الأسئلة */
+.question-img, .full-img {
+    max-width: 80%;
+    height: 80%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+h1, h2, h3 {
+    color: #00796b; /* لون أخضر داكن/تركوازي */
+    text-align: center;
+    border-bottom: 2px solid #e0f2f1;
+    padding-bottom: 10px;
+}
+
+.question-title {
+    font-size: 1.5em;
+    color: #388e3c;
+    margin-bottom: 15px;
+}
+
+/* تنسيق خيارات الإجابة */
+.options label {
+    display: block;
+    background: #e0f2f1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: 1px solid #b2dfdb;
+}
+
+.options label:hover {
+    background: #c8e6c9;
+}
+
+/* تنسيق زر الانتقال */
+.next-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.next-btn:hover {
+    background-color: #388e3c;
+}
+
+#results {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#final-score {
+    font-size: 2.5em;
+    color: #00796b;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+/* تأثير التلاشي */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
